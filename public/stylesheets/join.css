@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: #DFDFFF;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.container{
+    width: 100%;
+}
+
+.container .header{
+    background-color: rgb(100, 100, 240);
+    color: #eee;
+    text-align: center;
+    padding: 1rem;
+    border-bottom: 1px solid white;;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.container .main .form{
+    width: 100%;
+    background-color: rgb(100, 100, 255);
+    padding: 1rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.container .main .form label{
+    font-size: 1.2rem;
+}
+
+.container .main .form #username, .container .main .form #room{
+    width: 100%;
+    padding: 0.4rem;
+    border-radius: .3rem;
+    border: 1px solid black;
+    margin: .5rem 0;
+    font-size: 1.2rem;
+}
+
+.container .main .form input[type='submit']{
+    font-size: 1.4rem;
+    padding: .2rem 0;
+    margin: 1rem 0;
+    color: blue;
+    background-color: #BFDFFF;
+    border-radius: .3rem;
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 576px) and (max-width: 768px){
+    body{
+        display: block;
+        height: 100%;
+    }
+    .container{
+        width: 55%;
+        margin: 2rem auto;
+    }
+    .container .main .form{
+        padding: 1rem 2rem;
+    }
+    .container .header h1{
+        font-size: 2rem;
+    }
+    .container .main .form label{
+        font-size: 1.5rem;
+    }
+    .container .main .form #username, .container .main .form #room{
+        font-size: 1.5rem;
+    }
+    .container .main .form #joinBtn{
+        font-size: 1.5rem;
+    }
+
+}
+
+@media only screen and (min-width: 769px) and (max-width: 992px){
+    body{
+        display: block;
+        height: 100%;
+    }
+    .container{
+        width: 55%;
+        margin: 2rem auto;
+    }
+    .container .main .form{
+        padding: 1rem 2rem;
+    }
+    .container .header h1{
+        font-size: 2rem;
+    }
+    .container .main .form label{
+        font-size: 1.5rem;
+    }
+    .container .main .form #username, .container .main .form #room{
+        font-size: 1.5rem;
+    }
+    .container .main .form #joinBtn{
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (min-width:993px) and (max-width: 1200px){
+    body{
+        display: block;
+        height: 100%;
+    }
+    .container{
+        width: 55%;
+        margin: 2rem auto;
+    }
+    .container .main .form{
+        padding: 1rem 2rem;
+    }
+    .container .header h1{
+        font-size: 2rem;
+    }
+    .container .main .form label{
+        font-size: 1.5rem;
+    }
+    .container .main .form #username, .container .main .form #room{
+        font-size: 1.5rem;
+    }
+    .container .main .form #joinBtn{
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (min-width: 1201px){
+    body{
+        display: block;
+        height: 100%;
+    }
+    .container{
+        width: 50%;
+        max-width: 500px;
+        margin: 2rem auto;
+    }
+    .container .main .form{
+        padding: 1rem 2.5rem;
+    }
+    .container .header h1{
+        font-size: 2rem;
+    }
+    .container .main .form label{
+        font-size: 1.3rem;
+    }
+    .container .main .form #username, .container .main .form #room{
+        font-size: 1.3rem;
+    }
+    .container .main .form #joinBtn{
+        font-size: 1.3rem;
+    }
+}

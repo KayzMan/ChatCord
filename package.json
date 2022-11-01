@@ -1,0 +1,18 @@
+{
+  "name": "chatapp_with_rooms",
+  "version": "1.0.0",
+  "description": "a simple chat app with users and rooms",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "author": "ngoni kayz",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "moment": "^2.29.4",
+    "socket.io": "^4.5.3",
+    "socket.io-client": "^4.5.3"
+  }
+}

@@ -1,0 +1,351 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: #DFDFFF;
+}
+
+.chat-container{
+    width: 100%;
+    background-color: cornflowerblue;
+    border-radius: .5rem;
+}
+
+.chat-container .chat-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(100, 100, 240);
+    padding: .8rem;
+    color: #eee;
+    height: 4rem;
+}
+
+.chat-container .chat-header h1{
+    font-size: 1.5rem;
+}
+
+.chat-container .chat-header a{
+    text-decoration: none;
+}
+
+.btn{
+    color:cornflowerblue;
+    background-color: #DFDFFF;
+    padding: .3rem 0.5rem;
+    border-radius: .2rem;
+    font-size: 1rem;
+}
+
+.chat-container .chat-main #sidebar-open-btn{
+    position: fixed;
+    color: #555;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+.chat-container .chat-main .chat-sidebar{
+    color: #eee;
+    position: absolute;
+    height: calc(100% - 4rem);
+    left: -100%;
+    /* left: 0; */
+    padding: 0.5rem 2rem .5rem 1rem;
+    z-index: 10;
+    background-color: cornflowerblue;
+    overflow: hidden auto;
+    transition: all .25s ease-in;
+}
+
+.chat-container .chat-main .chat-sidebar h3{
+    margin: 1rem 0;
+    font-weight: bolder;
+}
+
+.chat-container .chat-main .chat-sidebar #room-name{
+    font-size: 1.2rem;
+    margin-left: .5rem;
+    background-color: rgb(100, 100, 240);
+    padding: .5rem 1rem .4rem .2rem;
+    width: 100%;
+    border-radius: .2rem;
+}
+
+.chat-container .chat-main .chat-sidebar #users li{
+    margin: 1rem 0 1rem .5rem;
+    list-style-type: none;
+    font-weight: bold;
+}
+
+.chat-container .chat-main .chat-sidebar #sidebar-close-btn{
+    font-size: 1.6rem;
+    color: #eee;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+.chat-container .chat-main .chat-messages{
+    background-color: #eee;
+    min-height: 15rem;
+    max-height: 20rem;
+    padding: .8rem .2rem .1rem .2rem;
+    overflow: hidden auto;
+}
+
+.chat-container .chat-main .chat-messages .message{
+    background-color: #DFDFFF;
+    margin: .8rem .5rem;
+    padding: .5rem;
+    border-radius: .2rem;
+}
+
+.chat-container .chat-main .chat-messages .message .meta{
+    color: cornflowerblue;
+    margin-bottom: .3rem;
+    width: 100%;
+}
+
+.chat-container .chat-main .chat-messages .message .text{
+    color: #444;
+    font-weight: bold;
+}
+
+.chat-container .chat-form-container{
+    padding: .8rem;
+    background-color: rgb(100, 100, 240);
+}
+
+.chat-container .chat-form-container #chat-form{
+    display: flex;
+    width: 100%;
+}
+.chat-container .chat-form-container #chat-form #msg{
+    width: 100%;
+    font-size: 1rem;
+    padding: .5rem;
+    border-radius: .3rem 0 0 .3rem;
+}
+
+.chat-container .chat-form-container #chat-form button.btn{
+    width: 35%;
+}
+
+.chat-container .chat-form-container #chat-form button.btn i{
+    margin-right: .2rem;
+}
+
+@media only screen and (min-width: 576px) and (max-width: 768px){
+    .chat-container .chat-header h1{
+        font-size: 2.5rem;
+    }
+    .btn{
+        font-size: 1.3rem;
+    }
+    .chat-container .chat-main #sidebar-open-btn{
+        font-size: 2rem;
+    }
+    .chat-container .chat-main .chat-sidebar #sidebar-close-btn{
+        font-size: 2rem;
+    }
+    .chat-container .chat-main .chat-sidebar h3{
+        font-size: 2rem;
+    }
+    .chat-container .chat-main .chat-sidebar #room-name{
+        font-size: 1.3rem;
+    }
+    .chat-container .chat-main .chat-sidebar #users li{
+        margin: 1.5rem 1rem;
+        font-size: 1.3rem;
+    }
+    .chat-container .chat-main .chat-messages{
+        padding: 1rem 2rem;
+    }
+    .chat-container .chat-main .chat-messages .message{
+        margin: 2rem 0;
+    }
+    .chat-container .chat-main .chat-messages .message .meta{
+        font-size: 1.4rem;
+    }
+    .chat-container .chat-main .chat-messages .message .text{
+        font-size: 1.4rem;
+    }
+    .chat-container .chat-form-container #chat-form #msg{
+        font-size: 1.3rem;
+        padding: .8rem;
+    }
+    .chat-container .chat-form-container #chat-form button.btn{
+        font-size: 1.2rem;
+        width: 18%;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 992px){
+    .chat-container .chat-header h1{
+        font-size: 2.5rem;
+    }
+    .btn{
+        font-size: 1.3rem;
+    }
+    .chat-container .chat-main #sidebar-open-btn{
+        font-size: 2rem;
+    }
+    .chat-container .chat-main .chat-sidebar #sidebar-close-btn{
+        font-size: 2rem;
+    }
+    .chat-container .chat-main .chat-sidebar h3{
+        font-size: 2rem;
+    }
+    .chat-container .chat-main .chat-sidebar #room-name{
+        font-size: 1.3rem;
+    }
+    .chat-container .chat-main .chat-sidebar #users li{
+        margin: 1.5rem 1rem;
+        font-size: 1.3rem;
+    }
+    .chat-container .chat-main .chat-messages{
+        padding: 1rem 2rem;
+    }
+    .chat-container .chat-main .chat-messages .message{
+        margin: 2rem 0;
+    }
+    .chat-container .chat-main .chat-messages .message .meta{
+        font-size: 1.4rem;
+    }
+    .chat-container .chat-main .chat-messages .message .text{
+        font-size: 1.4rem;
+    }
+    .chat-container .chat-form-container #chat-form #msg{
+        font-size: 1.3rem;
+        padding: .8rem;
+    }
+    .chat-container .chat-form-container #chat-form button.btn{
+        font-size: 1.2rem;
+        width: 18%;
+    }
+}
+
+@media only screen and (min-width: 993px) and (max-width: 1200px){
+    .chat-container .chat-header h1{
+        font-size: 2.5rem;
+    }
+    .btn{
+        font-size: 1.3rem;
+    }
+    .chat-container .chat-main #sidebar-open-btn{
+        font-size: 2rem;
+    }
+    .chat-container .chat-main .chat-sidebar #sidebar-close-btn{
+        font-size: 2rem;
+    }
+    .chat-container .chat-main .chat-sidebar h3{
+        font-size: 2rem;
+    }
+    .chat-container .chat-main .chat-sidebar #room-name{
+        font-size: 1.3rem;
+    }
+    .chat-container .chat-main .chat-sidebar #users li{
+        margin: 1.5rem 1rem;
+        font-size: 1.3rem;
+    }
+    .chat-container .chat-main .chat-messages{
+        padding: 1rem 2rem;
+    }
+    .chat-container .chat-main .chat-messages .message{
+        margin: 2rem 0;
+    }
+    .chat-container .chat-main .chat-messages .message .meta{
+        font-size: 1.4rem;
+    }
+    .chat-container .chat-main .chat-messages .message .text{
+        font-size: 1.4rem;
+    }
+    .chat-container .chat-form-container #chat-form #msg{
+        font-size: 1.3rem;
+        padding: .8rem;
+    }
+    .chat-container .chat-form-container #chat-form button.btn{
+        font-size: 1.2rem;
+        width: 18%;
+    }
+}
+
+@media only screen and (min-width: 1201px){
+    .chat-container{
+        width: 80%;
+        height: 100%;
+        margin: 1rem auto;
+    }
+    .chat-container .chat-header{
+        border-bottom: 1px solid white;
+        border-radius: .4rem .4rem 0 0;
+    }
+    .chat-container .chat-header h1{
+        font-size: 2.5rem;
+    }
+    .btn{
+        font-size: 1.3rem;
+    }
+    .chat-container .chat-main #sidebar-open-btn{
+        font-size: 2rem;
+        display: none;
+    }
+    .chat-container .chat-main .chat-sidebar #sidebar-close-btn{
+        font-size: 2rem;
+        display: none;
+    }
+    .chat-container .chat-main{
+        width: 100%;
+        height: 100%;
+        display: flex;
+    }
+    .chat-container .chat-main .chat-sidebar{
+        position: static;
+        background-color: rgb(100, 100, 240);
+        overflow: hidden auto;
+        max-height: 35rem;
+        height: 35rem;
+        width: 30%;
+    }
+    .chat-container .chat-main .chat-sidebar h3{
+        font-size: 1.5rem;
+    }
+    .chat-container .chat-main .chat-sidebar #room-name{
+        font-size: 1.3rem;
+        background-color: rgb(80, 80, 220);
+    }
+    .chat-container .chat-main .chat-sidebar #users li{
+        margin: 1.5rem 1rem;
+        font-size: 1.1rem;
+    }
+    .chat-container .chat-main .chat-messages{
+        padding: 1rem 2rem;
+        width: 100%;
+        max-height: 35rem;
+    }
+    .chat-container .chat-main .chat-messages .message{
+        margin: 2rem 0;
+    }
+    .chat-container .chat-main .chat-messages .message .meta{
+        font-size: 1.4rem;
+    }
+    .chat-container .chat-main .chat-messages .message .text{
+        font-size: 1.4rem;
+    }
+    .chat-container .chat-form-container{
+        border-radius: 0 0 .4rem .4rem;
+    }
+    .chat-container .chat-form-container #chat-form #msg{
+        font-size: 1.3rem;
+        padding: .8rem;
+    }
+    .chat-container .chat-form-container #chat-form button.btn{
+        font-size: 1.2rem;
+        width: 18%;
+    }
+}

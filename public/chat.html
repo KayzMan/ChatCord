@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatCord App</title>
+    <link rel="stylesheet" href="./stylesheets/all.css">
+    <link rel="stylesheet" href="./stylesheets/chat.css">
+</head>
+<body>
+
+    <div class="chat-container">
+
+        <header class="chat-header">
+            <h1><i class="fas fa-smile"></i> ChatCord </h1>
+            <h3 class="username"></h3>
+            <a href="index.html" class="btn">Leave Room</a>
+        </header>
+
+        <main class="chat-main">
+            <h1 id="sidebar-open-btn"><i class="fas fa-arrow-alt-circle-right"></i></h1>
+            <div class="chat-sidebar">
+                <h1 id="sidebar-close-btn"><i class="fas fa-arrow-alt-circle-left"></i></h1>
+                <h3><i class="fas fa-comments"></i> Room Name:</h3>
+                <h2 id="room-name"></h2>
+                <h3><i class="fas fa-users"></i> Users</h3>
+                <ul id="users">
+                </ul>
+            </div>
+
+            <div class="chat-messages">
+                <div class="chat-messages">
+                </div>
+            </div>
+
+        </main>
+
+        <div class="chat-form-container">
+            <form id="chat-form">
+                <input type="text" id="msg" placeholder="Enter Message"
+                 required autocomplete="off"/>
+                 <button class="btn"><i class="fas fa-paper-plane"></i>Send</button>
+            </form>
+        </div>
+
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./scripts/main.js"></script>
+    
+</body>
+</html>
