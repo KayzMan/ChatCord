@@ -58,6 +58,16 @@ body{
     cursor: pointer;
 }
 
+.container .about{
+    text-align: center;
+    margin: 3rem 0 0 0;
+}
+
+.container .about .text{
+    font-weight: lighter;
+    font-size: 2rem;
+}
+
 @media only screen and (min-width: 576px) and (max-width: 768px){
     body{
         display: block;
