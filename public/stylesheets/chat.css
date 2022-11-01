@@ -7,12 +7,14 @@
 
 body{
     background-color: #DFDFFF;
+    height: 100%;
 }
 
 .chat-container{
     width: 100%;
     background-color: cornflowerblue;
     border-radius: .5rem;
+    height: 100%;
 }
 
 .chat-container .chat-header{
@@ -27,6 +29,32 @@ body{
 
 .chat-container .chat-header h1{
     font-size: 1.5rem;
+}
+
+.chat-container .chat-header #notification #bell{
+    cursor: pointer;
+}
+
+.chat-container .chat-header #notification .text{
+    position: absolute;
+    top: 4.1rem;
+    left: 5rem;
+    max-height: 15rem;
+    min-width: 5rem;
+    overflow-y: auto;
+    background-color: cornflowerblue;
+    padding: 0 .8rem;
+    border-radius: 0 .5rem .5rem .5rem;
+    z-index: 10;
+    box-shadow: 5px 5px 35px rgba(0, 0, 0, 0.15);
+    transition: all .25s ease-in;
+}
+
+.chat-container .chat-header #notification .text ul li{
+    list-style-type: none;
+    margin: 1rem 0;
+    border-bottom: 1px dotted white;
+    padding: .5rem 0
 }
 
 .chat-container .chat-header a{
@@ -79,6 +107,15 @@ body{
     margin: 1rem 0 1rem .5rem;
     list-style-type: none;
     font-weight: bold;
+    cursor: pointer;
+    transition: all .55s ease-out;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-container .chat-main .chat-sidebar #users li:active{
+    background-color: rgb(90, 90, 200);
 }
 
 .chat-container .chat-main .chat-sidebar #sidebar-close-btn{
@@ -92,10 +129,13 @@ body{
 
 .chat-container .chat-main .chat-messages{
     background-color: #eee;
-    min-height: 15rem;
-    max-height: 20rem;
+    height: calc(100vh - 8.2rem);
     padding: .8rem .2rem .1rem .2rem;
+}
+
+.chat-container .chat-main .chat-messages .chat-messages{
     overflow: hidden auto;
+    height: calc(100vh - 10rem);
 }
 
 .chat-container .chat-main .chat-messages .message{
@@ -119,6 +159,9 @@ body{
 .chat-container .chat-form-container{
     padding: .8rem;
     background-color: rgb(100, 100, 240);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 .chat-container .chat-form-container #chat-form{
@@ -143,6 +186,18 @@ body{
 @media only screen and (min-width: 576px) and (max-width: 768px){
     .chat-container .chat-header h1{
         font-size: 2.5rem;
+    }
+    .chat-container .chat-header #notification #bell{
+        font-size: 1.8rem;
+    }
+    .chat-container .chat-header #notification .text{
+        max-height: 30rem;
+        padding: .8rem;
+        left: 15rem;
+    }
+    .chat-container .chat-header #notification .text ul li{
+        font-size: 1.5rem;
+        padding: .5rem 0
     }
     .btn{
         font-size: 1.3rem;
@@ -189,6 +244,18 @@ body{
     .chat-container .chat-header h1{
         font-size: 2.5rem;
     }
+    .chat-container .chat-header #notification #bell{
+        font-size: 1.5rem;
+    }
+    .chat-container .chat-header #notification .text{
+        max-height: 30rem;
+        padding: 1rem;
+        left: 15rem;
+    }
+    .chat-container .chat-header #notification .text ul li{
+        font-size: 1.5rem;
+        padding: .5rem 0;
+    }
     .btn{
         font-size: 1.3rem;
     }
@@ -233,6 +300,18 @@ body{
 @media only screen and (min-width: 993px) and (max-width: 1200px){
     .chat-container .chat-header h1{
         font-size: 2.5rem;
+    }
+    .chat-container .chat-header #notification #bell{
+        font-size: 1.5rem;
+    }
+    .chat-container .chat-header #notification .text{
+        max-height: 30rem;
+        padding: 1rem 0;
+        left: 15rem;
+    }
+    .chat-container .chat-header #notification .text ul li{
+        font-size: 1.5rem;
+        padding: .5rem 0
     }
     .btn{
         font-size: 1.3rem;
@@ -288,6 +367,22 @@ body{
     .chat-container .chat-header h1{
         font-size: 2.5rem;
     }
+    .chat-container .chat-header #notification .text{
+        top: 5rem;
+        padding: 1rem 0;
+        left: 33rem;
+    }
+    .chat-container .chat-header #notification #bell{
+        font-size: 1.5rem;
+    }
+    .chat-container .chat-header #notification .text{
+        max-height: 30rem;
+        padding: .5rem 4rem 2rem 4rem;
+    }
+    .chat-container .chat-header #notification .text ul li{
+        font-size: 1.5rem;
+        padding: .5rem 0
+    }
     .btn{
         font-size: 1.3rem;
     }
@@ -308,8 +403,7 @@ body{
         position: static;
         background-color: rgb(100, 100, 240);
         overflow: hidden auto;
-        max-height: 35rem;
-        height: 35rem;
+        height: calc(100vh - 11rem);
         width: 30%;
     }
     .chat-container .chat-main .chat-sidebar h3{
@@ -326,7 +420,10 @@ body{
     .chat-container .chat-main .chat-messages{
         padding: 1rem 2rem;
         width: 100%;
-        max-height: 35rem;
+        height: calc(100vh - 11rem);
+    }
+    .chat-container .chat-main .chat-messages .chat-messages{
+        height: calc(100vh - 12rem);
     }
     .chat-container .chat-main .chat-messages .message{
         margin: 2rem 0;
@@ -339,6 +436,9 @@ body{
     }
     .chat-container .chat-form-container{
         border-radius: 0 0 .4rem .4rem;
+        z-index: 10;
+        width: 80%;
+        margin-bottom: 1rem;
     }
     .chat-container .chat-form-container #chat-form #msg{
         font-size: 1.3rem;
@@ -348,4 +448,8 @@ body{
         font-size: 1.2rem;
         width: 18%;
     }
+}
+
+.hide{
+    display: none;
 }
