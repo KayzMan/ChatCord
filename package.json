@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "a simple chat app with users and rooms",
   "main": "index.js",
+  "engines": {
+    "node": "16.0.0"
+},
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js"
